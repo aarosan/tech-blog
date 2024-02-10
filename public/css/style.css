@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #23100F;
+    height: 175px;
+}
+
+nav {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #D9EAD3;
+    margin-right: 50px;
+}
+
+.title-header {
+    background-color: #D9EAD3;
+    color: #23100F;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #23100F;
+    border-radius: 5px;
+    margin-left: 100px;
+    box-shadow: 6px 6px 2px 1px #A7A7A7; 
+}
+
+main {
+    background-color: #D9EAD3;
+}
+
