@@ -56,11 +56,15 @@ This program uses the MIT License.
 
 ### Credits
 
-Markdown Badges: https://github.com/Ileriayo/markdown-badges?tab=readme-ov-file#badges
+- Markdown Badges: https://github.com/Ileriayo/markdown-badges?tab=readme-ov-file#badges
 
-Initial File Directory Architecture: Week-14 22-Stu_MVC-Review and 24-Stu_Auth-Review
+- Initial File Directory Architecture: Week-14 22-Stu_MVC-Review and 24-Stu_Auth-Review
 
-Using withAuth, loginFormHandler, and logout function from Week-14: 24-Stu_Auth-Review
+- Using withAuth, loginFormHandler, and logout function from Week-14: 24-Stu_Auth-Review
+
+- https://waelyasmina.medium.com/a-guide-into-using-handlebars-with-your-express-js-application-22b944443b65
+
+
 
 <a id="questions"></a>
 
