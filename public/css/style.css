@@ -34,3 +34,15 @@ main {
     background-color: #D9EAD3;
 }
 
+h2 {
+    margin-left: 20px;
+    padding: 10px;
+}
+.form {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.form-group {
+    padding: 10px;
+}
