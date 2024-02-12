@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
+// This is the homepage that will be shown once the user is logged in
 router.get('/', withAuth, async (req, res) => {
     try {
         const userData = await User.findAll({

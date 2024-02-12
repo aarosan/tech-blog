@@ -15,10 +15,19 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
+//This property is a string used to sign the session ID cookie. It's essential for enhancing the security of session data.
     secret: 'Super secret secret',
+
+//This property is an object that defines various options for the session cookie. In this case, it's an empty object, meaning the default options will be used.
     cookie: {},
+
+//This property determines whether the session should be saved back to the session store, even if the session was not modified during the request. Setting it to false improves performance by preventing unnecessary session updates.
     resave: false,
+
+//This property indicates whether a new session should be saved to the store if it's new but not modified. Setting it to true allows the session to be stored even if it's uninitialized.
     saveUninitialized: true,
+
+//This property specifies the session store where session data will be persisted. In this case, it's set to a new instance of SequelizeStore, which is a session store for Sequelize, an ORM for Node.js. It's configured with the db option pointing to a Sequelize database connection (sequelize). This means that session data will be stored in the specified Sequelize database.
     store: new SequelizeStore({
         db: sequelize
     })
