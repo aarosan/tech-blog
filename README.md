@@ -46,6 +46,8 @@ This application allows you to do the following:
 
 ### Deployed Application
 
+[Deployed Link](https://tech-blog-2024-5b32749a6285.herokuapp.com/)
+
 <a id="license"></a>
 
 ### License
