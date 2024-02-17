@@ -1,12 +1,12 @@
 {
   "name": "tech-blog",
   "version": "1.0.0",
-  "description": "A CMS-style blog site, where developers can publish their blog posts and comment on other developers’ posts as well. This application is deployed to Heroku, and will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.",
+  "description": "A CMS-style blog site, where developers can publish their blog posts and comment on other developers' posts as well.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "devStart": "nodemon server.js",
+    "dev": "nodemon server.js",
     "seed": "node seeds/seed.js"
   },
   "keywords": [],

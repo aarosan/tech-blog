@@ -2,7 +2,19 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 
-// NEED TO ADD A SIGN IN ROUTE(POST REQUEST)
+router.post('/signup', async (req, res) => {
+  try {
+
+    const userData = req.body;
+
+    const newUser = await User.create(userData);
+
+    res.json({ user: newUser, message: 'You are now signed up!' });
+
+  } catch (error) {
+    res.status(400).json(error);
+  }
+});
 
 
 router.post('/login', async (req, res) => {
@@ -27,14 +39,11 @@ router.post('/login', async (req, res) => {
         return;
       }
   
-      //This method is used to save the session data to the session store. It ensures that any changes made to the session variables are persisted before continuing with the rest of the code inside the callback function.
       req.session.save(() => {
 
-        //This line sets the user_id property in the session to the id value retrieved from the userData object. This is typically done after a user successfully logs in, where userData contains information about the logged-in user, such as their database ID.
         req.session.user_id = userData.id;
 
-        //This line sets the logged_in property in the session to true, indicating that the user is now logged in. This flag is commonly used throughout the application to check if the user is authenticated and to grant access to protected routes or resources.
-        req.session.logged_in = true;
+        req.session.loggedIn = true;
         
         res.json({ user: userData, message: 'You are now logged in!' });
       });

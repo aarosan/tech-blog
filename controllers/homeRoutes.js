@@ -5,18 +5,26 @@ const withAuth = require('../utils/auth');
 
 // This is what needs to be on the home routes
 
-// get('/')
-    // THIS WILL RENDER 'HOMEPAGE'
+// homepage.handlebars
+router.get('/', withAuth, async (req, res) => {
+    try {
 
-    // Any Posts Made
-        // Just the title is shown in the post
-    // + New Post at the bottom
+        const userData = await User.findAll({
+            attributes: { exclude: ['password']},
+            order: [['name', 'ASC']],
+        });
 
-    // The + New Post at the bottom goes to a handlebar page to create the post
-            // THIS WILL RENDER 'NEWPOST'
+        const users = userData.map((project) => project.get({ plain: true }));
 
-    // If you click on the title of the article, it goes to a handlebar page to edit the post
-            // THIS WILL RENDER 'EDITPOST'
+
+        res.render('homepage', { users });
+        // This is the homepage that will be shown once the user is logged in
+
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 
 // post('/newPost')
@@ -26,6 +34,7 @@ const withAuth = require('../utils/auth');
     // Title, Content textbox
 
     // Create button to trigger the post request
+
 
 // put('/editPost') and delete('/editPost')
     // LOCATED IN 'EDITPOST'
@@ -37,32 +46,35 @@ const withAuth = require('../utils/auth');
     // Update button to trigger put request
     // Delete button to trigger delete request
 
-// This is the homepage that will be shown once the user is logged in
-router.get('/', withAuth, async (req, res) => {
-    try {
-        const userData = await User.findAll({
-            attributes: { exclude: ['password']},
-            order: [['name', 'ASC']],
-        });
 
-        const users = userData.map((project) => project.get({ plain: true }));
-
-
-        res.render('homepage', { users });
-
-    } catch (err) {
-        res.status(500).json(err);
-    }
+// homepage.handlebars
+router.get('/homepage', (req, res) => {
+    res.render('homepage');
 });
 
-router.get('/login', (req, res) => {
-    if (req.session.logged_in) {
+// dashboard.handlebars
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+});
+
+// login.handlebars
+router.get('/login-page', (req, res) => {
+    if (req.session.loggedIn) {
       res.redirect('/');
       return;
     }
 
     res.render('login');
-  });
-  
+});
 
+router.get('/logout-page', (req, res) => {
+    res.render('logout');
+})
+
+// signup.handlebars
+router.get('/signup', (req, res) => {
+    
+    res.render('signup');
+});
+  
 module.exports = router;
