@@ -23,10 +23,9 @@ router.get('/', async (req, res) => {
         const message = "All of the posts";
 
         // Uncomment .json/Comment .render for Postman API test
-        // blogpost.handlebars GETS the post itself and any comments that are added to it
 
-        // res.status(200).render('blogpost', { posts });
-        res.status(200).json({ data: posts, message: message });
+        res.status(200).render('dashboard', { posts });
+        // res.status(200).json({ data: posts, message: message });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -84,5 +83,8 @@ router.post('/newComment/:postId', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// blogpost.handlebars GETS the post itself and any comments that are added to it
+
 
 module.exports = router;
