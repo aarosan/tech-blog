@@ -1,0 +1,20 @@
+[
+    {
+        "content": "Great post!",
+        "date": "2024-02-18T12:30:00Z",
+        "post_id": 1, 
+        "user_id": 2
+    },
+    {
+        "content": "Nice content!",
+        "date": "2024-02-18T13:00:00Z",
+        "post_id": 1, 
+        "user_id": 1 
+    },
+    {
+        "content": "I agree with the points made.",
+        "date": "2024-02-17T10:30:00Z",
+        "post_id": 2, 
+        "user_id": 1 
+    }
+]

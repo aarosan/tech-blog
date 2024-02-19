@@ -11,11 +11,14 @@
 <body>
   <header class="display-flex justify-space-between align-center p-2">
     <nav>
+
         <a href="/homepage">Home</a>
         <a href="/dashboard">Dashboard</a>
 
         {{!-- {{#if loggedIn}} --}}
-        <a href="/logout-page">Logout</a>
+
+        <a href="/login-page" id="logout">Logout</a>
+
         {{!-- {{else}} --}}
         <a href="/login-page">Login</a>
         <a href="/signup">Sign-Up</a>
@@ -35,5 +38,5 @@
       
   </footer>
 </body>
-
+<script src="/js/logout.js"></script>
 </html>

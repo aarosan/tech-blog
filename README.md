@@ -36,6 +36,8 @@ This application allows you to do the following:
 
 ### Usage
 
+TALK ABOUT THE NPM SCRIPTS HERE AND SHOW CODE EXAMPLE!
+
 <a id="employee-tracker">
 
 ### Tech Blog Database
@@ -65,7 +67,6 @@ This program uses the MIT License.
 - Using withAuth, loginFormHandler, and logout function from Week-14: 24-Stu_Auth-Review
 
 - https://waelyasmina.medium.com/a-guide-into-using-handlebars-with-your-express-js-application-22b944443b65
-
 
 
 <a id="questions"></a>

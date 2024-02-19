@@ -67,9 +67,10 @@ router.get('/login-page', (req, res) => {
     res.render('login');
 });
 
-router.get('/logout-page', (req, res) => {
-    res.render('logout');
-})
+// router.get('/logout-page', (req, res) => {
+//     res.render('logout');
+// })
+
 
 // signup.handlebars
 router.get('/signup', (req, res) => {
