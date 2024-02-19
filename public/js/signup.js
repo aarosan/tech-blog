@@ -10,6 +10,8 @@ const signupFormHandler = async (event) => {
     if (name && email && password) {
 
       // an API call being saved inside a variable. This will run a post request to /api/users/signup
+
+      // a fetch request is basically what you do in insomnia or postman
       const response = await fetch('/api/users/signup', {
         method: 'POST',
         body: JSON.stringify({ name, email, password }),

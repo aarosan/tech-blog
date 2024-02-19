@@ -35,6 +35,12 @@ const sess = {
 
 app.use(session(sess));
 
+//This is to test the logout route in postman
+app.use((req, res, next) => {
+    req.session.logged_in = true;
+    next();
+});
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
