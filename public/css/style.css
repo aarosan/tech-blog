@@ -38,6 +38,7 @@ h2 {
     margin-left: 20px;
     padding: 10px;
 }
+
 .form {
     margin-left: 20px;
     padding: 10px;
@@ -45,4 +46,18 @@ h2 {
 
 .form-group {
     padding: 10px;
+}
+
+.blog-post-comment {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.blog-post-user {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+h3 {
+    margin-left: 20px;
 }
